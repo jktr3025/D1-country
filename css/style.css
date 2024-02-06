@@ -1,0 +1,390 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    background-color: #fff;
+    color: #333;
+    font-family: '돋움';
+    font-size: 14px;
+}
+.clear_fix::before,
+.clear_fix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#wrap{
+    position: relative;
+}
+
+/* up */
+#up{
+    width: 100%;
+    height: 850px;
+    display: flex;
+}
+
+/* up_left */
+.up_left{
+    width: 200px;
+    height: 850px;
+    /* background-color: #eee; */
+}
+
+.logo{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.logo a{
+    /* border: 1px sienna solid; */
+}
+.logo a img{}
+
+.nav{}
+.main{
+    width: 160px;
+    margin: 0 auto;
+}
+.main > li{
+    margin-bottom: 10px;
+}
+.main > li > a{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    border-bottom: 4px solid lightsalmon;
+    background-color: lightsalmon;
+    transition: all 0.5s;
+}
+.main > li:hover > a{
+border-bottom: 4px solid green;
+}
+
+.sub{
+    display: none;
+}
+.sub li{}
+.sub li a{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    display: block;
+    background-color: olive;
+    color: beige;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.sub li a:hover{
+    color: olive;
+    background-color: beige;
+}
+
+.spot{
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.spot a{
+    font-size: 12px;
+    display: inline-block;
+    padding: 1px 10px;
+    /* border: 1px solid rebeccapurple; */
+}
+.spot a:first-child{
+    border-right: 1px solid #333;
+}
+.spot a:hover{
+    text-decoration: underline;
+}
+
+/* up_right */
+.up_right{
+    width: calc(100% - 200px);
+    height: 850px;
+    /* background-color: #ddd; */
+}
+.img_slide{
+    width: 100%;
+    height: 400px;
+    /* background-color: aquamarine; */
+    overflow: hidden;
+    position: relative;
+}
+.top_move{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1200px;
+}
+.top_move li{
+    width: 100%;
+    height: 400px;
+}
+.top_move li a{}
+.top_move li a img{
+    width: 100%;
+    height: 100%;
+}
+
+.banner{
+    width: 100%;
+    height: 200px;
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_inner{
+    width: 95%;
+    height: 80%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.b_1{
+    width: 15%;
+    margin: 0 10px;
+}
+.b_1 img{
+    width: 100%;
+}
+.b_2{}
+.b_2 h2{
+    margin-bottom: 20px;
+}
+.b_2 p{
+    line-height: 2;
+}
+
+.b_3{
+    margin: 0 10px;
+}
+
+.tap{
+    width: 100%;
+    height: 250px;
+    background-color: lightgoldenrodyellow;
+    position: relative;
+}
+.tap > div{
+    width: 90%;
+    height: 230px;
+}
+.tap h2{
+    font-size: 14px;
+    height: 30px;
+    text-align: center;
+    width: 150px;
+    line-height: 30px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+    border-bottom-color: #eee;
+    position: absolute;
+    left: 1%;
+    top: 10px;
+    cursor: pointer;
+}
+.tap h2.on{
+    background-color: #eee;
+    color: #333;
+    z-index: 5;
+}
+.tap ul{
+    position: absolute;
+    width: 100%;
+    height:201px;
+    background-color: #eee;
+    border: 1px solid #333;
+    left: 1%;
+    top: 39px;
+
+}
+.notice{}
+.notice h2{
+}
+.notice ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+.notice ul li{
+    display: flex;
+}
+.notice ul li a{
+    width: 80%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.notice ul li a:hover{
+    text-decoration: underline;
+}
+.notice ul li span{
+    width: 20%;
+    text-align: right;
+}
+
+.gallery{}
+.gallery h2{
+    left: calc(150px + 1%);
+}
+.gallery ul{
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+.gallery ul li{
+    width: 30%;
+    text-align: center;
+}
+.gallery ul li a{
+    display: block;
+}
+.gallery ul li a img{
+    /* width: 100%; */
+    height: 180px;
+}
+
+.link{
+    width: 100px;
+    height: 300px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.link a{
+    border-bottom: 1px dotted gray;
+}
+.link a:last-child{
+    border-bottom: none;
+}
+.link a img{
+    width: 80px;
+    height: 80px;
+}
+
+/* footer */
+#footer{
+    width: 100%;
+    height: 100px;
+    /* background-color: #333; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.f_logo{
+    width: 200px;
+}
+.f_lolem{
+    width: calc(100% - 400px);
+    padding: 0 20px;
+    line-height: 1.5;
+    font-size: 12px;
+}
+.f_sns{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.f_sns a{
+    display: inline-block;
+    cursor: pointer;
+    z-index: 5;
+    margin-left: 5px;
+}
+.pop{
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border: 5px double darkblue;
+    padding: 20px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    z-index: 100;
+    display: none;
+}
+
+.pop h3{
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
+}
+.pop p{
+    text-align: justify;
+}
+.close{
+    border: none;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 4px 10px;
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+
+/* .tap1{
+    width: 800px;
+    height: 250px;
+    border: 1px solid red;
+}
+.txt{
+    position: relative;
+}
+.txt h2{
+    display: inline-block;
+    background-color: pink;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.txt h2.on{
+    background-color: hotpink;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    height: 230px;
+}
+.content ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: pink;
+}
+.content ul:nth-child(2){
+    display: none;
+}
+.content ul img{
+    width: 50px;
+} */
